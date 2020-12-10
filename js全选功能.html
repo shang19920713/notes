@@ -1,0 +1,65 @@
+全选功能自写
+
+<table>
+    <thead>
+	    <tr>
+	        <th >
+	            <input type="checkbox" name="all"  id="ischange" >
+	        </th>
+	        <th>序号</th>
+	        <th>小说ID</th>
+	        <th>小说名称</th>
+	        
+	    </tr>
+    </thead>
+    <tbody>
+	    <tr class="">
+	        <td> <input type="checkbox" name="ids"  onchange="checkAll()" value=""></td>
+	        <td>2</td>
+	        <td>3</td>
+	        <td>4</td>
+	     </tr>
+	     <tr class="">
+	        <td> <input type="checkbox" name="ids"  onchange="checkAll()" value=""></td>
+	        <td>2</td>
+	        <td>3</td>
+	        <td>4</td>
+	     </tr>
+    </tbody>
+</table>
+<script>
+   
+	//获得选中值
+    function getIds() {
+        var chk_value =[];
+        $('input[name="ids"]:checked').each(function(){
+            chk_value.push($(this).val());
+        });
+        return chk_value;
+    }
+    $("#ischange").change(function() {
+
+        if($("input[name='all']").is(':checked')) {
+            $("input[name='ids']").prop('checked',true);
+        }else{
+            $("input[name='ids']").prop('checked',false);
+        }
+    });
+    function checkAll()
+    {
+        var check = 0;
+        $('input[name="ids"]').each(function(){
+            if(!($(this).is(':checked'))) {
+                check = 1;
+            }
+        });
+        if(check){
+            $("input[name='all']").prop('checked',false);
+        }else{
+            $("input[name='all']").prop('checked',true);
+        }
+    }
+</script>
+
+
+

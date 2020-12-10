@@ -1,0 +1,10 @@
+js相关知识
+
+数组转字符串 [1,2,3].tostring();--1,2,3
+字符串转数组 "a,b,c".split(',');--["a","b","c"]
+长时间存储值--刷新页面不会失效
+localStorage.setItem("key",'value')存值
+localStorage.getItem("key")取值
+localStorage.clear()初始化删除所有值
+设置表单属性 $("input[name='ids']").prop('checked',true)
+
