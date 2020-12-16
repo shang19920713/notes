@@ -38,7 +38,19 @@
 #linux 安装ffmpeg
 `https://www.cnblogs.com/lpyan/p/9015890.html`  
 `https://blog.csdn.net/yzhang6_10/article/details/75635734`
-
+#安装php扩展 phpize报错
+grep: /usr/include/php/main/php.h: No such file or directory
+grep: /usr/include/php/Zend/zend_modules.h: No such file or directory
+grep: /usr/include/php/Zend/zend_extensions.h: No such file or directory
+Configuring for:
+PHP Api Version:        
+Zend Module Api No:     
+Zend Extension Api No:
+###解决办法
+sudo ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include /usr/include  
+####或者
+$ cd /Library/Developer/CommandLineTools/Packages/
+$ open macOS_SDK_headers_for_macOS_10.14.pkg
 
 
 
