@@ -13,4 +13,7 @@
 ###2、服务器代码覆盖本地代码
 `git reset --hard`  
 `git pull origin master`
-
+#首次提交需要设置用户名以及邮箱
+```
+git config --global user.name "用户名"
+git config --global user.email "邮箱名"

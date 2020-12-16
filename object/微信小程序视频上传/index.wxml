@@ -1,0 +1,18 @@
+<!--方式一-->
+<view class="page-body-info">
+    <block wx:if="{{src === ''}}">
+        <view class="image-plus image-plus-nb" bindtap="chooseVideo">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+        </view>
+        <view class="image-plus-text">添加视频</view>
+    </block>
+    <block wx:if="{{src != ''}}">
+        <video src="{{src}}" class="video"></video>
+    </block>
+</view>
+
+<!--方式二-->
+<video id='video{{idx}}' show-center-play-btn="{{true}}" src='{{videoUrl}}' controls="true" objectFit="cover">
+</video>
+<button class="start_btn"   bindtap="addVideoTap">添加视频</button>
