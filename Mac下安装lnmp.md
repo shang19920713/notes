@@ -86,5 +86,10 @@ server {
 }
 ```
 
+#安装多版本php
+###如果brew search php没有想要的php版本可以通过下个命令将php老版本找回
+`brew tap exolnet/homebrew-deprecated`
+
+
 
 

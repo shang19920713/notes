@@ -12,7 +12,7 @@
 #删除文件夹或者文件
 `rm -rf 文件名//强制删除 -r为询问删除`
 #文件软链 将/home/shengbao.shang/zhangyi_op/shengbao_shang.conf 文件建立软链 到/usr/local/nginx/config/vhost/shengbao_shang.conf文件
-`sudo ln -s /home/shengbao.shang/zhangyi_op/shengbao_shang.conf shengbao_shang.conf`
+`ln -s /home/shengbao.shang/zhangyi_op/shengbao_shang.conf shengbao_shang.conf`
 #用户相关
 ##添加用户：root权限下 
 `添加用户: useradd -m 用户名`
@@ -38,19 +38,13 @@
 #linux 安装ffmpeg
 `https://www.cnblogs.com/lpyan/p/9015890.html`  
 `https://blog.csdn.net/yzhang6_10/article/details/75635734`
-#安装php扩展 phpize报错
-grep: /usr/include/php/main/php.h: No such file or directory
-grep: /usr/include/php/Zend/zend_modules.h: No such file or directory
-grep: /usr/include/php/Zend/zend_extensions.h: No such file or directory
-Configuring for:
-PHP Api Version:        
-Zend Module Api No:     
-Zend Extension Api No:
-###解决办法
-sudo ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include /usr/include  
-####或者
-$ cd /Library/Developer/CommandLineTools/Packages/
-$ open macOS_SDK_headers_for_macOS_10.14.pkg
+#查看端口
+`netstat -aptn 查看所有开启的端口号`
+#服务器如果不能联网可以试试
+`vi /etc/sysconfig/network-scripts/ifcfg-eth0（每个机子都可能不一样，但格式会是“ifcfg-eth数字”），把ONBOOT=no，改为ONBOOT=yes`  
+`重启网络：service network restart`
+
+
 
 
 
