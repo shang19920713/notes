@@ -43,7 +43,14 @@
 #服务器如果不能联网可以试试
 `vi /etc/sysconfig/network-scripts/ifcfg-eth0（每个机子都可能不一样，但格式会是“ifcfg-eth数字”），把ONBOOT=no，改为ONBOOT=yes`  
 `重启网络：service network restart`
-
+#-bash: nginx: command not found
+```
+1、vim /etc/profile
+2、环境变量里加入nginx安装目录 例如
+export PATH=$PATH:/usr/local/mysql/bin:/usr/local/nginx/sbin
+3、source /etc/profile 让配置文件重新生效
+```
+#设置开机启动应该是在/etc/rc.local文件，加入需要设置的运行路径即可
 
 
 
