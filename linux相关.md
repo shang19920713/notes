@@ -38,8 +38,6 @@
 #linux 安装ffmpeg
 `https://www.cnblogs.com/lpyan/p/9015890.html`  
 `https://blog.csdn.net/yzhang6_10/article/details/75635734`
-#查看端口
-`netstat -aptn 查看所有开启的端口号`
 #服务器如果不能联网可以试试
 `vi /etc/sysconfig/network-scripts/ifcfg-eth0（每个机子都可能不一样，但格式会是“ifcfg-eth数字”），把ONBOOT=no，改为ONBOOT=yes`  
 `重启网络：service network restart`
@@ -51,10 +49,25 @@ export PATH=$PATH:/usr/local/mysql/bin:/usr/local/nginx/sbin
 3、source /etc/profile 让配置文件重新生效
 ```
 #设置开机启动应该是在/etc/rc.local文件，加入需要设置的运行路径即可
-
-
-
-
-
-
-
+#开放端口 出现FirewallD is not running 需要开启防火墙
+```
+1、开启防火墙 
+    systemctl start firewalld
+2、开放指定端口
+      firewall-cmd --zone=public --add-port=1935/tcp --permanent
+ 命令含义：
+--zone #作用域
+--add-port=1935/tcp  #添加端口，格式为：端口/通讯协议
+--permanent  #永久生效，没有此参数重启后失效
+3、重启防火墙
+      firewall-cmd --reload
+4、查看端口号
+netstat -ntlp   //查看当前所有tcp端口·
+netstat -ntulp |grep 1935   //查看所有1935端口使用情况
+```
+#虚拟机设置共享文件夹 
+`1、进入sss目录`  
+`2、mount -t vboxsf www（共享文件名） sss（存入共享文件目录）`  
+#查看进程https://www.linuxprobe.com/12linux-process-commands.html
+`ps -aux |grep - #列出所有进程`  
+`ps -aux |grep nginx #列出指定进程`  
