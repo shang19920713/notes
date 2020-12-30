@@ -1,0 +1,87 @@
+
+网址：https://blog.csdn.net/zongjinlong/article/details/107521267
+开发者信息
+
+系统名称：RXThinkCMF_TP6_PRO权限(RBAC)及内容管理框架
+作者[牧羊人]：南京RXThinkCMF研发中心
+官网网址：http://www.rxthink.cn/
+文档网址：http://docs.v6.rxthink.cn/
+开源协议：Apache 2.0
+后台演示（用户名:admin 密码:123456）
+
+演示地址：http://manage.pro6.rxthink.cn/
+
+专业版仓库：https://gitee.com/ruoxi520_admin/RXThinkCMF_TP6
+
+旗舰版仓库：https://gitee.com/ruoxi520_admin/RXThinkCMF_TP6_PRO
+
+
+____________________________________________
+模版二
+网址：http://www.ulthon.com/open_source/4.html
+演示地址：http://ulthon-admin.ulthon.com/admin/Login/index.html
+账号: admin 密码: 123456
+
+快速试用
+1.安装
+git clone https://gitee.com/ulthon/ulthon_admin.git
+或者
+composer create-project ulthon/ulthon_admin:dev-master
+2.进入目录
+cd ulthon_admin/
+3.安装依赖
+composer install
+4.初始化数据库
+php think migrate:run
+php think seed:run
+5.使用内置服务器
+php think run -p 8010
+6.访问前台
+127.0.0.1:8010/index.php/index
+7.访问后台
+127.0.0.1:8010/index.php/admin
+后台帐号密码：admin/123456
+
+
+开发注意
+后台页面仅仅使用了TP的模板包含特性
+支持所有(TP6支持的)类型数据库
+填写正确的数据库连接配置,
+
+执行php think migrate:run安装数据库
+
+执行php think seed:run初始化数据
+
+使用了配置全局中间件
+在这个中间件里把数据库的配置信息设置到项目中.
+
+中间件: \app\\middleware\ConfigInit
+
+文件上传
+经过这个类上传的文件会保存到public下,
+
+TP原本配置会保存到public/storage下,本项目修改了配置,直接保存到public下.
+
+类:\app\api\controller\Files::save()
+
+
+------------------------------------
+
+TP6+VUE框架开源商城源码，支持公众号、小程序、H5同步
+网址：https://developers.weixin.qq.com/community/develop/article/doc/0006ca5742c588352d597f08f51013
+
+免费源码下载地址：https://github.crmeb.net/u/gitee
+系统帮助文档：https://help.crmeb.net/crmeb
+QQ技术交流群：710729856
+演示地址：http://demo26.crmeb.net
+
+
+免费源码下载地址：https://github.crmeb.net/u/gitee
+系统帮助文档：https://help.crmeb.net/crmeb
+QQ技术交流群：710729856
+演示地址：http://demo26.crmeb.net
+
+
+——————————————————————————————————————————————————————
+基于tp6的后台管理系统
+git地址：https://github.com/774649283/tp6-cool-admin
