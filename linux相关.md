@@ -12,7 +12,10 @@
 #删除文件夹或者文件
 `rm -rf 文件名//强制删除 -r为询问删除`
 #文件软链 将/home/shengbao.shang/zhangyi_op/shengbao_shang.conf 文件建立软链 到/usr/local/nginx/config/vhost/shengbao_shang.conf文件
-`ln -s /home/shengbao.shang/zhangyi_op/shengbao_shang.conf shengbao_shang.conf`
+###注意：比如想把/home/shengbao.shang/123.conf 建立软链到vhost下命令应该这样写
+`ln -s /home/shengbao.shang/123.conf /usr/local/nginx/conf/vhost`  
+###不应该这样写
+`ln -s /home/shengbao.shang/123.conf /usr/local/nginx/conf/vhost/123.conf`  
 #用户相关
 ##添加用户：root权限下 
 `添加用户: useradd -m 用户名`
@@ -63,11 +66,11 @@ export PATH=$PATH:/usr/local/mysql/bin:/usr/local/nginx/sbin
       firewall-cmd --reload
 4、查看端口号
 netstat -ntlp   //查看当前所有tcp端口·
-netstat -ntulp |grep 1935   //查看所有1935端口使用情况
+netstat -ntulp | grep 1935   //查看所有1935端口使用情况
 ```
 #虚拟机设置共享文件夹 
 `1、进入sss目录`  
 `2、mount -t vboxsf www（共享文件名） sss（存入共享文件目录）`  
 #查看进程https://www.linuxprobe.com/12linux-process-commands.html
 `ps -aux |grep - #列出所有进程`  
-`ps -aux |grep nginx #列出指定进程`  
+`ps -aux |grep nginx #列出指定进程`   

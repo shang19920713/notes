@@ -14,6 +14,11 @@
 `git reset --hard`  
 `git pull origin master`
 #首次提交需要设置用户名以及邮箱
+git config --global user.name "用户名"  
+git config --global user.email "邮箱名"  
+#git pull 报错：insufficient permission for adding an object to repository database .git/objects
 ```
-git config --global user.name "用户名"
-git config --global user.email "邮箱名"
+进入项目.git/objects下
+sudo chgrp -R shengbao.shang(用户组名) .
+sudo chmod -R g+rwX .
+```

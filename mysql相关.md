@@ -11,4 +11,3 @@
 `ALTER TABLE ugc_program MODIFY real_audiopath VARCHAR(200)NULL`
 `查询表-字段个数`
 `SELECT count(1) from information_schema.COLUMNS WHERE table_schema='cgkb1库名' and table_name='yy_info表名';`
-
