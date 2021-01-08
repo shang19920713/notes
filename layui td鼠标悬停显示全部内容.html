@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格内容溢出省略号显示</title>
+
+    <style type="text/css">
+        .contain {
+            font-family: ‘ Microsoft YaHei ’;
+            margin: 15px auto;
+            width: 900px;
+        }
+
+        table {
+            border: 1px solid #e3e6e8;
+            border-collapse: collapse;
+            display: table;
+            table-layout: fixed;
+            text-align: center;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #e3e6e8;
+            height: 38px;
+            line-height: 38px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #189AD6;
+            color: #fff;
+        }
+
+        .layui-layer {
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    </style>
+
+    <!--relate to this page javascript-->
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+
+</head>
+<body>
+<div class="contain">
+    <table>
+        <thead>
+        <th>货币</th>
+        <th>本周收盘</th>
+        <th>上周收盘</th>
+        <th>涨跌</th>
+        <th>幅度</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>EURGBP“EUR/GBP settled above 0.90 on Friday as the bounce in EUR/USD helped the lift the pair further into the 0.90 territory”.</td>
+            <td>0.86333333333393222222</td>
+            <td>0.88945555555555555553</td>
+            <td>-203333333333333333111</td>
+            <td>-2.3166%</td>
+        </tr>
+        <tr>
+            <td>EURGBP</td>
+            <td>0.8693</td>
+            <td>0.8894</td>
+            <td>-201</td>
+            <td>-2.31%</td>
+        </tr>
+        <tr>
+            <td>EURGBP</td>
+            <td>0.8693</td>
+            <td>0.8894</td>
+            <td>-201</td>
+            <td>-2.31%</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $("td").on("mouseenter", function() {
+            //js主要利用offsetWidth和scrollWidth判断是否溢出。
+            //在这里scrollWidth是包含内容的完全高度，offsetWidth是当前表格单元格的宽度。
+            if (this.offsetWidth < this.scrollWidth) {
+                var that = this;
+                var text = $(this).text();
+                window.layer.tips(text, that, {
+                    tips: 1,
+                    time: 2000
+                });
+            }
+        });
+    })
+</script>
+</body>
+</html>
