@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  引入layui.css  -->
+    <style>
+        .a{cursor: pointer;max-width:100px;text-align: center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+        td img{width:30px;max-height:60px;cursor:pointer}
+        .layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin="line"], .layui-table[lay-skin="row"]
+        {
+            border: none;
+            text-align:left;
+        }
+        .alter{background-color:#fafafa;}
+        .layui-table tbody tr:hover,.layui-table thead tr,.layui-table-click,.layui-table-header,.layui-table-hover,.layui-table-mend,.layui-table-patch,.layui-table-tool,.layui-table-total,.layui-table-total tr,.layui-table[lay-even] tr:nth-child(even)
+        {
+            background-color:#EBF7FF;
+        }
+        .layui-table th{font-weight: bold;color: #999}
+    </style>
+</head>
+<body>
+    <table class="layui-table">
+        <colgroup>
+            <col width="10%">
+            <col width="10%">
+            <col width="15%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+        </colgroup>
+    <thead>
+    <tr style="background-color:#fafafa;">
+        <th>节目名</th>
+        <th>小说名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+        <?php
+            for($i=0;$i<5;$i++){
+                if($i%2 != 0){
+                    echo '<tr class="alter">';
+                }else{
+                    echo '<tr>';
+
+                }
+            echo '<td class="a">jiemumingjiemumingjiemumingjiemuming</td>';
+            echo '<td>小说名</td>';
+            echo '<td><a href="./upload.php"><button type="button" class="layui-btn layui-btn-warm">编辑节目</button></a></td>';
+            }
+        ?>
+
+    </tbody>
+</table>
+<script>
+    $(function(){
+        $(".a").on("mouseenter", function() {
+            //js主要利用offsetWidth和scrollWidth判断是否溢出。
+            //在这里scrollWidth是包含内容的完全高度，offsetWidth是当前表格单元格的宽度。
+            // if (this.offsetWidth <= this.scrollWidth) {
+            //
+            // }
+            var that = this;
+            var text = $(this).text();
+            window.layer.tips(text, that, {
+                tips: 1,
+                time: 1500
+            });
+        });
+    });
+</script>
+</body>
+</html>
