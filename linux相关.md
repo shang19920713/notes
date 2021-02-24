@@ -74,3 +74,15 @@ netstat -ntulp | grep 1935   //查看所有1935端口使用情况
 #查看进程https://www.linuxprobe.com/12linux-process-commands.html
 `ps -aux |grep - #列出所有进程`  
 `ps -aux |grep nginx #列出指定进程`   
+#PHP执行shell_exec方法失败
+多半原因在php.ini文件中未打开方法权限  
+在php.ini开启即可  
+#PhpSpreadsheet php excel接口 https://blog.csdn.net/jackbon8/article/details/107914628?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161122582716780264095375%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161122582716780264095375&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-22-107914628.pc_search_result_no_baidu_js&utm_term=php&spm=1018.2226.3001.4187
+#增加php版本 https://blog.csdn.net/haisley/article/details/82080927?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161122618716780266243468%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161122618716780266243468&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-82080927.pc_search_result_no_baidu_js&utm_term=php&spm=1018.2226.3001.4187
+#阿里云视频直播PHP-SDK接入教程 https://blog.csdn.net/qq_41976646/article/details/88317894?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161122618716780266243468%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161122618716780266243468&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-13-88317894.pc_search_result_no_baidu_js&utm_term=php&spm=1018.2226.3001.4187
+#PHP八大设计模式 https://blog.csdn.net/flitrue/article/details/52614599?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161122645816780299070929%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161122645816780299070929&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-27-52614599.pc_search_result_no_baidu_js&utm_term=php&spm=1018.2226.3001.4187
+#开启端口 如6379
+`vim /etc/sysconfig/iptables`  
+``
+`service iptables restart`  
+

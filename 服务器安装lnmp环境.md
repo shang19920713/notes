@@ -1,4 +1,4 @@
-#准备阶段 参考链接：http://www.jingfengshi.com/article/40
+#准备阶段 参考链接：http://www.jingfengshi.com/article/40  https://blog.csdn.net/aloha12/article/details/88852714?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161121623416780255247969%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161121623416780255247969&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-14-88852714.pc_search_result_no_baidu_js&utm_term=php&spm=1018.2226.3001.4187
 ###关闭防火墙
 `service iptables stop`
 ###关闭 selinux

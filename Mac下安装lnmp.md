@@ -5,6 +5,7 @@
 ###安装成功之后 启动mysql
 `brew services start mysql@5.6`
 ###因为用的是zsh所以需要设置一下软链
+`cd /usr/local/bin/`  
 `sudo ln -fs /usr/local/opt/mysql@5.6/bin/mysql mysql` 
 ####或者 下面当时没成功
 `echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.zshrc`  
@@ -35,6 +36,7 @@
 `sudo mkdir -p /usr/var/log`  
 `sudo touch  /usr/var/log/php-fpm.log`
 #修改nginx配置 是其能运行php 实际操作是 修改nginx.conf servers下建立了一个.conf文件  
+#操作位置在/usr/local/etc
 ###nginx.conf
 ```
 worker_processes  1;  
