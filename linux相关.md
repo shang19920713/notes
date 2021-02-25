@@ -85,4 +85,6 @@ netstat -ntulp | grep 1935   //查看所有1935端口使用情况
 `vim /etc/sysconfig/iptables`  
 ``
 `service iptables restart`  
+#监测日志
+`tail -f error.log`  
 
