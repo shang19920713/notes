@@ -1,0 +1,30 @@
+mamp搭建网站相关：
+
+nginx的配置文件所在位置 可参考图一寻找 来源地址：https://blog.csdn.net/weixin_41480994/article/details/108374065
+
+nginx报404错误 需要在nginx.conf配置文件里加入如下代码
+
+if (!-e $request_filename) {
+    rewrite  ^(.*)$  /index.php?s=/$1  
+    last;
+}
+
+具体添加位置见图二
+
+如果有路由前缀存在 可在配置文件中加入这段代码 其中dms就是前缀 到时候需要替换成实际前缀
+
+location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|ico|woff|svg)$ {
+                rewrite ^/dms/(.*)$ /$1 last;
+                expires 30d;
+        }
+
+        location ~ .*\.(js|css)?$ {
+                rewrite ^/dms/(.*)$ /$1 last;
+                expires 1d;
+        }
+具体添加位置见图二
+
+
+关于数据库 用Navicat登录时 默认密码账号都是root host要写localhost 并且还有一个高级配置 可参见图三
+
+在项目里配置 host一定要写localhost 不要写127.0.0.1 具体例子可参照图四
