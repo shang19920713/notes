@@ -1,5 +1,10 @@
 mamp搭建网站相关：
 
+mysql无法启动：
+解析：主要原因是上次关闭Mysql是出现异常而导致的，
+解决方法如下：
+删除/Applications/MAMP/tmp/mysql/mysql.sock（文件与文件夹），重新启动Mysql即可。
+
 nginx的配置文件所在位置 可参考图一寻找 来源地址：https://blog.csdn.net/weixin_41480994/article/details/108374065
 
 nginx报404错误 需要在nginx.conf配置文件里加入如下代码
