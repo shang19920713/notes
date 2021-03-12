@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58be86ef-361d-43c6-b956-1377f56265a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThinkPHP.md" beforeDir="false" afterPath="$PROJECT_DIR$/ThinkPHP.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linux相关.md" beforeDir="false" afterPath="$PROJECT_DIR$/linux相关.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mamp搭建相关/mamp搭建网站相关.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mamp搭建相关/mamp搭建网站相关.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,6 +63,11 @@
       <workItem from="1614581999257" duration="100000" />
       <workItem from="1614586530109" duration="1029000" />
       <workItem from="1614653495784" duration="986000" />
+      <workItem from="1614926518116" duration="838000" />
+      <workItem from="1615256923179" duration="4635000" />
+      <workItem from="1615342833263" duration="2807000" />
+      <workItem from="1615441960084" duration="686000" />
+      <workItem from="1615514780628" duration="769000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,21 @@ mamp搭建网站相关：
 mysql无法启动：
 解析：主要原因是上次关闭Mysql是出现异常而导致的，
 解决方法如下：
-删除/Applications/MAMP/tmp/mysql/mysql.sock（文件与文件夹），重新启动Mysql即可。
+删除/Applications/MAMP/tmp/mysql/mysql.sock（文件夹），重新启动Mysql即可。
+
+Nvcative 无法导入数据库 可以试试下面这个方法：参考网址：http://www.voidcn.com/article/p-gqipktxq-bmq.html
+解决办法：
+打开MAMP PRO，选择菜单栏File->Edit Template->MySQL->5.5.3（选择你的版本）），这时打开了一个文本
+ 一、打开MAMP PRO，选择菜单栏File->Edit Template->MySQL->5.5.3（选择你的版本）），这时打开了一个文本，
+[mysqld]
+将innodb_force_recovery 的值改成0（当时改成0后成功导入 至于网址说的改成1 到时候可以视情况而定 这块没整明白）
+innodb_force_recovery = 0 
+//关于redis扩展
+参考网址：http://blog.xiaoniba.com/19187.html
+
+新增项目后打不开 并且nginx不能重启 解决办法：
+ps -ef | grep nginx
+pkill -9 nginx 杀掉nginx
 
 nginx的配置文件所在位置 可参考图一寻找 来源地址：https://blog.csdn.net/weixin_41480994/article/details/108374065
 

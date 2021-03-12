@@ -90,5 +90,7 @@ netstat -ntulp | grep 1935   //查看所有1935端口使用情况
 #日志处理可实用php 的SeasLog扩展 参考网址：https://www.imooc.com/learn/591
 #php与js生成与解析crcode二维码 可参考网址：https://www.imooc.com/learn/862
 #Beanstalkd-带你玩转消息队列 参考网址：https://www.imooc.com/learn/912
-#php秒杀设计 参考网址：PHP秒杀设计  
+#php秒杀设计 参考网址：PHP秒杀设计 
+#环境不能执行php文件 可能是php-fpm没有启动
+`进入php目录里的sbin里  nohup ./php-fpm > a.log &  `
 
