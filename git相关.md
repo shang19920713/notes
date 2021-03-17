@@ -22,3 +22,5 @@ git config --global user.email "邮箱名"
 sudo chgrp -R shengbao.shang(用户组名) .
 sudo chmod -R g+rwX .
 ```
+#使用git push时报错OpenSSL SSL_connect: Connection was reset in connection to github.com:443
+`git config --global http.sslVerify false`
